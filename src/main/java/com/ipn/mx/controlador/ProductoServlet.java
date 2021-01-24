@@ -185,9 +185,10 @@ public class ProductoServlet extends HttpServlet {
             int idCategoriaAnterior = Integer.parseInt(request.getParameter("categoriaEditId"));
             CategoriaDAO daoc = new CategoriaDAO();
             CategoriaDTO dtoc = new CategoriaDTO();
-            dtoc.getEntidad().setIdCategoria(idCategoria);
-            dto = dao.read(dto);
-            System.out.println("dto recuperado " + dto.getEntidad().getIdCategoria());
+            dtoc.getEntidad().setIdCategoria(idCategoria);//agrega id de nueva categoria a dto
+            dto = dao.read(dto); //lee producto a editar
+            dtoc.setEntidad(daoc.read(dtoc).getEntidad()); //obtiene nueva categoria
+            //System.out.println("dto recuperado " + dto.getEntidad().getIdCategoria());
             dto.getEntidad().setNombreProducto(nombre);
             dto.getEntidad().setDescripcionProducto(descripcion);
             dto.getEntidad().setPrecio(precio);

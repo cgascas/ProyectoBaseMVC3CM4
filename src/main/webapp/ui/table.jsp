@@ -146,7 +146,7 @@
                 </div>
                 <footer class="bg-white sticky-footer">
                     <div class="container my-auto">
-                        <div class="text-center my-auto copyright"><span>CESAR EDUARDO GASCA SANCHEZ 4CM3</span></div>
+                        <div class="text-center my-auto copyright"></div>
                     </div>
                 </footer>
                 <div class="modal" role="dialog" tabindex="-1" id="modal">
